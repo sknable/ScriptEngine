@@ -9,16 +9,12 @@ namespace Demo
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] ags)
         {
 
             CScriptEngine sharpEngine = new CScriptEngine();
 
-            Console.WriteLine(sharpEngine.Eval("int i = 0;"));
-            Console.WriteLine(sharpEngine.Eval("i++;"));
-            Console.WriteLine(sharpEngine.Eval("i++;"));
-            Console.WriteLine(sharpEngine.Eval("i++;"));
-            Console.WriteLine(sharpEngine.Eval("i++;"));
+            sharpEngine.LoadScriptFile(@"C:\Test\Steve.cs");
 
             Console.ReadLine();
         }
