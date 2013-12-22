@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CScript", "CScript\CScript.csproj", "{F2BA57AC-CEB9-4FB3-A4B0-9918B2DAD185}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DAE029E1-88A6-498B-AA92-C0D9E44F980A} = {DAE029E1-88A6-498B-AA92-C0D9E44F980A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{DE159AB8-BE63-4F28-93C1-DA1DD4936886}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DAE029E1-88A6-498B-AA92-C0D9E44F980A} = {DAE029E1-88A6-498B-AA92-C0D9E44F980A}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIMCore", "CIMAgent\CIMCore.csproj", "{DAE029E1-88A6-498B-AA92-C0D9E44F980A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIMCore", "CIMCore\CIMCore.csproj", "{DAE029E1-88A6-498B-AA92-C0D9E44F980A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

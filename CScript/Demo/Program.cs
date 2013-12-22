@@ -14,7 +14,7 @@ namespace Demo
 
             CScriptEngine sharpEngine = new CScriptEngine();
 
-            sharpEngine.LoadScriptFile(@"C:\Test\Steve.cs");
+            sharpEngine.LoadScriptFile(@"C:\Users\steve\Documents\visual studio 2013\Projects\CIMScript\CIMScript\Sample.cs");
 
             Console.ReadLine();
         }

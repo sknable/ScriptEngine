@@ -12,8 +12,9 @@ namespace CScript
     {
 
         private Evaluator sharpCompiler;
+        private dynamic script;
         public string loadedCSharpCode { get; private set; }
-        private CompiledMethod scriptDelegate;
+
 
         /// <summary>
         /// 
@@ -22,7 +23,7 @@ namespace CScript
         {
             CompilerContext context = new CompilerContext(new CompilerSettings(),new ConsoleReportPrinter());
             sharpCompiler = new Evaluator(context);
-            //sharpCompiler.LoadAssembly("CIMCore.dll");      
+            sharpCompiler.LoadAssembly("CIMCore.dll");      
 
         }
 
@@ -47,14 +48,13 @@ namespace CScript
 
             Assembly asm = ((Type)sharpCompiler.Evaluate("typeof(Script);")).Assembly;
 
-            dynamic script = asm.CreateInstance("Script");
+            script = asm.CreateInstance("Script");
 
-            int result = script.Sum(1, 2);
+            int result = script.SetupWrapupUI("1.1.1");
 
-           // object returnvalue = new object();
-           // scriptDelegate(ref returnvalue);
-     
-                return true;
+            Console.WriteLine(result);
+
+            return true;
        
         }
 

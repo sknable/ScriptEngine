@@ -8,5 +8,7 @@ namespace CIMAgent
 {
     public class Interaction
     {
+
+
     }
 }
